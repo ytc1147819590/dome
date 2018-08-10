@@ -1,0 +1,104 @@
+ contenteditable="true"//可编辑
+
+history go();//表示后退与刷新。如数据有改变也随之改变
+history back();//只是单纯的返回到上一页。返回不刷新
+
+window.location.href="地址"//返回同时刷新
+
+focus（）//获取焦点
+blur（）//失去焦点
+
+focusin（）；//form里面获取焦点
+focusout（）；//form里面失去焦点
+
+readonly//只读
+
+.activeColor {
+    border-bottom: 1px solid $icon-color-3!important;
+    transition: border-bottom 1000ms linear;
+}//渐进
+
+overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+
+
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+overflow: hidden;
+
+word-break:break-all;
+word-wrap:break-word;//换行
+
+ location.reload();//重新加载文档
+
+
+::-webkit-scrollbar{width:14px;}
+::-webkit-scrollbar-track{background-color:#F1F1F1;}
+::-webkit-scrollbar-thumb{background-color:#C1C1C1;}
+::-webkit-scrollbar-thumb:hover {background-color:#9c3}
+::-webkit-scrollbar-thumb:active {background-color:#00aff0}//overflow:auto滚动条的样式
+
+.wrap-outer {
+    margin-left: calc(100vw - 100%);
+}
+
+或者：
+
+.wrap-outer {
+    padding-left: calc(100vw - 100%);
+}//解决滚动条跳动
+
+.contents()//修改iframe标签的样式
+
+.clearfix::after {
+	content: ".";
+	clear: both;
+	display: block;
+	overflow: hidden;
+	font-size: 0;
+	height: 0;
+}//清除浮动
+
+
+appearance:none;
+-moz-appearance:none;
+-webkit-appearance:none;//去掉下拉的样式
+
+if(window.screen.width>1427&&window.screen.width<=1920){  
+   document.write("<link href='${ctx}/resources/css/party-service/party-self-building-css2.css' rel='stylesheet'>");  
+}  
+
+
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+
+
+-webkit-overflow-scrolling:touch//滚动的效果
+
+Validate（）//验证
+
+ autocomplete=off//关闭填充
+
+ul:after { content: ''; display: block; width: 0; height: 0; clear: both; }//清除浮动
+
+onkeyup="value=value.replace(/[^\d]/g,'')"//只能输入数字
+
+
+
+
+p{position: relative; line-height: 20px; max-height: 40px;overflow: hidden;}
+p::after{content: "..."; position: absolute; bottom: 0; right: 0; padding-left: 40px;
+background: -webkit-linear-gradient(left, transparent, #fff 55%);
+background: -o-linear-gradient(right, transparent, #fff 55%);
+background: -moz-linear-gradient(right, transparent, #fff 55%);
+background: linear-gradient(to right, transparent, #fff 55%);
+}//文本隐藏
+
+
+
+
+
+
+
+<!DOCTYPE html> <html> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <title>Examples</title> <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"/> <meta name="description" content=""> <meta name="keywords" content=""> <link href="" rel="stylesheet"> </head> <style> .radio-check { position: relative; height: 35px; } .radio-check > input { position: absolute; left: 0; top: 0; width: 20px; height:20px; opacity: 0; } .radio-check > label { position: absolute; left: 30px; line-height: 20px; top: 0px; } .radio-check > label:before { content: ''; position: absolute; left: -30px; top: 0px; display: inline-block; width: 20px; height: 20px; border-radius: 50%; border: 1px solid #ddd; transition: all 0.3s ease; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; } .radio-check > label:after { content: ''; position: absolute; left: -30px; top: 0px; display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-top: 6px; margin-left: 6px; transition: all 0.3s ease; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; } .radio-check input[type='radio']:checked + label:before { border-color: #4cd764; } .radio-check input[type='radio']:checked + label:after { background: #4cd764; } </style> <body> <div class='radio-check'> <input type='radio' name='test' id='test1'/> <label for='test1' class>苹果</label> </div> <div class='radio-check'> <input type='radio' name='test' id='test2'/> <label for='test2' class>橘子</label> </div> <div class='radio-check'> <input type='radio' name='test' id='test3'/> <label for='test3' class>梨</label> </div> <div class='radio-check'> <input type='radio' name='test' id='test4'/> <label for='test4' class>香蕉</label> </div> <div class='radio-check'> <input type='radio' name='test' id='test5'/> <label for='test5' class>菠萝</label> </div> </body> </html>
