@@ -3,8 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
-<body>
+    <link rel="stylesheet" href="css/amazeui.css">
+    <style>
+        #vld-tooltip {
+            position: absolute;
+            z-index: 1000;
+            padding: 5px 10px;
+            background: #F37B1D;
+            min-width: 150px;
+            color: #fff;
+            transition: all 0.15s;
+            box-shadow: 0 0 5px rgba(0,0,0,.15);
+            display: none;
+        }
 
+        #vld-tooltip:before {
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            width: 0;
+            height: 0;
+            margin-left: -8px;
+            content: "";
+            border-width: 0 8px 8px;
+            border-color: transparent transparent #F37B1D;
+            border-style: none inset solid;
+        }
+    </style>
+
+</head>
+<body style="width: 500px;margin: 0 auto">
+<form action="" class="am-form" id="form-with-tooltip">
+    <fieldset>
+        <legend>定义 Tooltip</legend>
+        <div class="am-form-group">
+            <label for="doc-vld-name-2-0">用户名：</label>
+            <input type="text" id="doc-vld-name-2-0" minlength="3"
+                   placeholder="输入用户名（至少 3 个字符）" required/>
+        </div>
+
+        <div class="am-form-group">
+            <label for="doc-vld-pwd-1-0">密码：</label>
+            <input type="password" id="doc-vld-pwd-1-0" placeholder="6 位数字的银行卡密码" pattern="^\d{6}$" required data-foolish-msg="把 IQ 卡密码交出来！"/>
+        </div>
+
+        <button class="am-btn am-btn-secondary" type="submit">提交</button>
+    </fieldset>
+</form>
 </body>
+
+<script type="text/javascript" src="js/jquery-2.2.2.min.js"></script>
+<script type="text/javascript" src="js/amazeui.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var $form = $('#form-with-tooltip');
+        var $tooltip = $('<div id="vld-tooltip">提示信息！</div>');
+        $tooltip.appendTo(document.body);
+
+        $form.validator();
+
+        var validator = $form.data('amui.validator');
+console.log($form.data());
+
+        $form.on('focusin focusout', '.am-form-error input', function(e) {
+            if (e.type === 'focusin') {
+                var $this = $(this);
+                var offset = $this.offset();
+                var msg = $this.data('foolishMsg') ;
+
+                $tooltip.text(msg).show().css({
+
+                    top: offset.top + $(this).outerHeight() + 10
+                });
+            } else {
+                $tooltip.hide();
+            }
+        });
+    });
+</script>
 </html>
