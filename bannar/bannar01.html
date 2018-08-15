@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bannar图</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        #text{
+            width:800px;
+            height:400px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
+        #text .bannar{
+            display: flex;
+            width: inherit;
+            height:100%;
+            position: relative;
+
+        }
+        #text .bannar .slide{
+            width: inherit;
+            height:inherit;
+        }
+    </style>
+</head>
+<body>
+    <div id="text">
+        <div class="bannar">
+            <div class="slide"><img src="image/1.jpg" alt=""></div>
+            <div class="slide"><img src="image/2.jpg" alt=""></div>
+            <div class="slide"><img src="image/3.jpg" alt=""></div>
+            <div class="slide"><img src="image/4.jpg" alt=""></div>
+            <div class="slide"><img src="image/5.png" alt=""></div>
+            <div class="slide"><img src="image/6.jpg" alt=""></div>
+        </div>
+        <div class="piece"></div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-2.2.2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var bannarLength=$(".slide").size();
+        var oIndex=0;
+        setInterval(function () {
+            oIndex++;
+            $(".bannar").css({
+                "transform":"translate3d("+(-oIndex*800)+"px,0,0)",
+                "transition":"all .6s ease-in-out 0s"
+            });
+            if(oIndex>=bannarLength-1){
+                oIndex=-1;
+            }
+        },2000)
+    })
+</script>
+</html>
