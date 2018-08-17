@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/_waves.css">
+    <script type="text/javascript" src="js/waves.js"></script>
+    <style>
+        .btn{
+            width: 100px;
+            height:30px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">11</div>
+    <div class="btn waves-effect waves-red">
+        按钮
+    </div>
+
+</body>
+<script type="text/javascript">
+
+
+//    (function (window) {
+//        var ying=ying || {};//声明一个变量，并且是对象
+//
+//        var $$ = document.querySelectorAll.bind(document);
+//
+//        var Effect={
+//            duration:1000,//延迟时间
+//            show: function (e,element) {//e不是event
+//
+//                // 禁止右键点击
+////                if (e.button === 2) {
+////                    return false;
+////                }
+//
+//                var el = element || this;
+//console.log(el);
+//                var ripple=document.createElement("div");
+//                ripple.className="waves-ripple";//添加类
+////                el.appendChild(ripple);
+//
+//                //点击时获取坐标和元素
+//                var pos         = offset(el);
+//                var relativeY   = (e.pageY - pos.top);
+//                var relativeX   = (e.pageX - pos.left);
+//                var scale       = 'scale('+((el.clientWidth / 100) * 10)+')';
+//
+//                if ('touches' in e) {
+//                    relativeY   = (e.touches[0].pageY - pos.top);
+//                    relativeX   = (e.touches[0].pageX - pos.left);
+//                }
+//            },
+//            hide: function (e) {
+//
+//            }
+//        };
+//
+//        function offset(elem) {
+//            var docElem, win,
+//                    box = {top: 0, left: 0},
+//                    doc = elem && elem.ownerDocument;
+//
+//            docElem = doc.documentElement;
+//
+//            if (typeof elem.getBoundingClientRect !== typeof undefined) {
+//                box = elem.getBoundingClientRect();
+//            }
+//            win = getWindow(doc);
+//            return {
+//                top: box.top + win.pageYOffset - docElem.clientTop,
+//                left: box.left + win.pageXOffset - docElem.clientLeft
+//            };
+//        }
+//
+//
+//        ying.displayEffect= function (options) {
+//            var options = options || {};//为空时是对象
+//            Effect.show();
+//            if ('duration' in options){//如果option对象里面有“duration”执行
+//
+//            }
+//        };
+//
+//        ying.attach= function (element) {
+//            console.log(1)
+//        };
+//        window.ying=ying;//为空放到window对象里面
+//
+//        console.log(ying);
+//
+//        document.addEventListener("DOMContentLoaded", function () {//文档加载完后执行
+//            ying.displayEffect();
+//        })
+//    })(window);
+</script>
+</html>
