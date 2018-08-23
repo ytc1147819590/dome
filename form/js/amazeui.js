@@ -714,17 +714,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	  $('.am-topbar-fixed-bottom').length &&
 	  $body.addClass('am-with-topbar-fixed-bottom');
 
-	  // Remove responsive classes in .am-layout
-	  var $layout = $('.am-layout');
+	  // Remove responsive classes in .am-布局
+	  var $layout = $('.am-布局');
 	  $layout.find('[class*="md-block-grid"]').alterClass('md-block-grid-*');
 	  $layout.find('[class*="lg-block-grid"]').alterClass('lg-block-grid');
 
-	  // widgets not in .am-layout
+	  // widgets not in .am-布局
 	  $('[data-am-widget]').each(function() {
 	    var $widget = $(this);
-	    // console.log($widget.parents('.am-layout').length)
-	    if ($widget.parents('.am-layout').length === 0) {
-	      $widget.addClass('am-no-layout');
+	    // console.log($widget.parents('.am-布局').length)
+	    if ($widget.parents('.am-布局').length === 0) {
+	      $widget.addClass('am-no-布局');
 	    }
 	  });
 	});
