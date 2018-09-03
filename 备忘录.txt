@@ -86,7 +86,7 @@ ul:after { content: ''; display: block; width: 0; height: 0; clear: both; }//Çå³
 
 oninput="value=value.replace(/[^\d]/g,'')"//Ö»ÄÜÊäÈëÊı×Ö
 
-
+    event.stopPropagation();//×èÖ¹Ã°Åİ
 
 
 p{position: relative; line-height: 20px; max-height: 40px;overflow: hidden;}
@@ -142,6 +142,18 @@ background: linear-gradient(to right, transparent, #fff 55%);
 
  font-family:"Microsoft YaHei",Arial,Helvetica,sans-serif !important;//×ÖÌå
 
+box-shadow:10px 10px 50px 20px pink inset;//ÄÚÖÃÒõÓ°
+
+document.addEventListener('DOMContentLoaded', function() {
+    //ÎÄµµ¼ÓÔØÍê³Éºó´¥·¢
+}, false);
+
+
+autocomplete="new-password"//Çå³ıÃÜÂë×Ô¶¯Ìî³ä
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
 
 
 https://blog.csdn.net/weixin_36944932/article/details/79217093
