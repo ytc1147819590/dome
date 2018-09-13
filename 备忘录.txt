@@ -152,8 +152,62 @@ document.addEventListener('DOMContentLoaded', function() {
 autocomplete="new-password"//清除密码自动填充
 
 
+
+
+type : "POST",
+          dataType: "json",
+          data: obj,
+          url: "/pc/agent/saveAgent",//ajax
+
+
+  $(".terms-link").click(function(){
+    sessionStorage.setItem("tabValue", "0")
+  });//设置 为0
+ var tabValue = sessionStorage.getItem("tabValue");//获取，结果为0
+
+<code class="language-html">function downloadIamge(selector, name) {  
+    // 通过选择器获取img元素，  
+    var img = document.querySelector(selector)  
+    // 将图片的src属性作为URL地址  
+    var url = img.src  
+    var a = document.createElement('a')  
+    var event = new MouseEvent('click')  
+      
+    a.download = name || '下载图片名称'  
+    a.href = url  
+      
+    a.dispatchEvent(event)  
+}</code>  //下载图片
+
+
+clipboard.min.js//一键复制链接
+
+ <input type="text" id="copys" style="opacity: 0;position: absolute;z-index: -1">
+            <div id="copylinkBtn" class="copylinkBtn" data-clipboard-action="copy" data-clipboard-target="#copys"></div>
+
+  $(".copylinkBtn").on("click" , function(req , res){
+    //复制链接
+    $("#copys").val("<%=house ? house.houseLink : ''%>");
+    var clipboard = new ClipboardJS('#copylinkBtn');
+
+    clipboard.on('success', function(e) {
+      $("#copyLink").blur();
+      e.clearSelection();
+      alertOpen(false , "" , true , '<%= __('pc_house_copyLink')%>');
+    })
+  })
+
+
+ readonly onfocus="this.removeAttribute('readonly');"//清除填充
+
   <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
   <meta name="apple-mobile-web-app-capable" content="yes">
+
+partial
+
+  <meta name="renderer" content="webkit"/>
+  <meta name="force-rendering" content="webkit"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
 
 
 https://blog.csdn.net/weixin_36944932/article/details/79217093
