@@ -2,7 +2,7 @@
  * Created by Administrator on 2018/9/7.
  */
 
-var http = require('http');
+var http = require('http');//创建服务器
 
 http.createServer(function (request, response) {
 
