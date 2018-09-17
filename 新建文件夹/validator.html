@@ -83,20 +83,16 @@
         });
 
 
-
         $(".submit").on("click",function(){
+            if($form.validator('isFormValid')){
+                $form.validator('destroy');
+                console.log(1)
+            }else{
+                console.log(2)
+            }
+        });
 
-           $("form").validator({
-               onValid:function(){
-                    console.log(1)
-               },
-               onInValid:function(){
-                    console.log(2)
-               }
-           });
-        })
-
-    });
+    })
 
 </script>
 </html>
