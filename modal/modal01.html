@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹窗</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .yy{
+            width: 100px;
+            line-height: 30px;
+            text-align: center;
+            background-color: blue;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .y-modal{
+            background-color: #000;
+            opacity: 0.3;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .y-modal-content{
+            position: fixed;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="yy">点击弹窗</div>
+
+
+    <div class="y-modal"></div>
+    <div class="y-modal-content">
+
+    </div>
+</body>
+</html>

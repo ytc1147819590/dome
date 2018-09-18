@@ -1,0 +1,93 @@
+
+/*清除默认样式*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,html{
+  width: 100%;
+  height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-size: inherit;
+}
+
+a{
+  color: inherit;
+  text-decoration: inherit;
+}
+
+ul,li,ol{
+  list-style: none;
+}
+
+
+/*弹性布局*/
+.flex-box{
+  display: flex;
+}
+
+.flex-jus-start{
+  justify-content: flex-start;
+}
+
+.flex-jus-center{
+  justify-content: center;
+}
+
+.flex-jus-end{
+  justify-content: flex-end;
+}
+
+.flex-jus-bet{
+  justify-content: space-between;
+}
+
+.flex-jus-aro{
+  justify-content: space-around;
+}
+
+.flex-jus-eve{
+  justify-content: space-evenly;
+}
+
+.flex-align-start{
+  align-items: flex-start;
+}
+
+.flex-align-center{
+  align-items: center;
+}
+
+.flex-align-end{
+  align-items: flex-end;
+}
+
+.flex-dir{
+  flex-direction: column;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+
+/*css3 兼容*/
+@mixin transform($translate){
+  -webkit-transform: $translate;
+  -moz-transform: $translate;
+  -ms-transform: $translate;
+  -o-transform: $translate;
+  transform: $translate;
+}
+
+@mixin transition($transition){
+  -webkit-transform: $transition;
+  -moz-transform: $transition;
+  -ms-transform: $transition;
+  -o-transform: $transition;
+  transform: $transition;
+}

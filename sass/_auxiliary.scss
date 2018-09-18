@@ -1,0 +1,52 @@
+
+/*position*/
+.y-fixed{
+  position: fixed;
+}
+
+.y-abs{
+  position: absolute;
+}
+
+.y-rel{
+  position: relative;
+}
+
+.y-pos-center{
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%,-50%));
+}
+
+
+/*margin*/
+.y-marAuto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*图片*/
+.y-imgCenter{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/*浮动*/
+.fl{
+  float: left;
+}
+
+.fr{
+  float: right;
+}
+
+.clr:after{
+  content:'';
+  overflow: hidden;
+  clear: both;
+  display: block;
+  width: 0;
+  height: 0;
+}
