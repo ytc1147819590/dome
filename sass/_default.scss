@@ -85,9 +85,24 @@ ul,li,ol{
 }
 
 @mixin transition($transition){
-  -webkit-transform: $transition;
-  -moz-transform: $transition;
-  -ms-transform: $transition;
-  -o-transform: $transition;
-  transform: $transition;
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
 }

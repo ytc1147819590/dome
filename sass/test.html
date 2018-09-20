@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="total.css">
+    <style>
+        .btn{
+            cursor: pointer;
+            width: 100px;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
     <div class="btn">
@@ -11,6 +21,33 @@
     </div>
 
     <div class="y-module"></div>
-    <div class=""></div>
+    <div class="y-module-content">
+        1111111111111111111111111111111111111111111111111111
+        1111111111111111111111111111111111111111111111111111
+        1111111111111111111111111111111111111111111111111111
+        1111111111111111111111111111111111111111111111111111
+        1111111111111111111111111111111111111111111111111111
+        1111111111111111111111111111111111111111111111111111
+        1111111111111111111111111111111111111111111111111111
+    </div>
 </body>
+<script type="text/javascript" src="../js/jquery-2.2.2.min.js"></script>
+<script type="text/javascript">
+//    function $(s){
+//        return document.querySelectorAll(s)
+//    }
+
+
+    $(".btn").on("click", function () {
+            $(".y-module").css({
+                "opacity":"1",
+                "display":"block"
+            });
+
+        $(".y-module-content").css({
+            "opacity":"1",
+            "display":"block"
+        }).addClass("move");
+    });
+</script>
 </html>
