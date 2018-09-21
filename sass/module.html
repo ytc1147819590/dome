@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="total.css">
+    <style>
+        .btn{
+            cursor: pointer;
+            width: 100px;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">
+        点击
+    </div>
+
+</body>
+<script type="text/javascript" src="../js/jquery-2.2.2.min.js"></script>
+<script type="text/javascript">
+
+    var valueStr = "" || {};
+    var  obj= JSON.stringify(valueStr);
+
+    function create(){
+        return document.createElement("div");
+    }
+    var module = {
+        show:function(obj){
+            var mask=create();
+            var text=create();
+            text.classList.add("y-module-content","move","opacity1");
+            mask.classList.add("y-module","opacity1");
+
+            text.innerHTML  = "<div class='y-title-wrap clr'>"
+                    +"<p class='title fl'>"+(obj.title ? obj.title : "")+"</p>"
+                    +"<p class='close fr'>X</p>"
+                +"</div>"
+
+                +"<div class='y-content'>"
+                   +(obj.content ? obj.content : "")
+                +"</div>"
+                +"<div class='y-module-btn clr'>"
+                    +"<div class='confirm fr'>确认</div>"
+                +"</div>";
+
+            if(!document.querySelector(".y-module-content")){
+                document.body.appendChild(mask);
+                document.body.appendChild(text);
+            }else{
+                return false;
+            }
+            this.del();
+        },
+        hide:function(){
+
+            var $yModule = document.querySelector(".y-module");
+            var $yModuleContent = document.querySelector(".y-module-content");
+
+            $yModule.classList.remove("opacity1");
+            $yModuleContent.classList.remove("move","opacity1");
+            $yModuleContent.classList.add("remove");
+
+            setTimeout(function () {
+                document.body.removeChild($yModule);
+                document.body.removeChild($yModuleContent);
+            },500);
+        },
+        del:function(){
+            var close = document.querySelector(".close");
+            var confirm = document.querySelector(".confirm");
+            confirm.onclick=close.onclick=function(){
+                module.hide();
+            };
+
+        }
+    };
+
+    $(".btn").on("click", function () {
+        module.show({
+            title:"标题",
+            content:"23523542353245235235423532452352354235324523523542353245"
+        });
+
+    });
+
+</script>
+</html>
