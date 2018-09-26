@@ -4,8 +4,8 @@
 
 //PI 常量
 
-//const PI = 3.1415;
-//PI // 3.1415
+const PI = 3.1415;
+PI // 3.1415
 
 //const foo;
 // SyntaxError: Missing initializer in const declaration
