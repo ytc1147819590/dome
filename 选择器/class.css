@@ -1,0 +1,21 @@
+
+[title]{
+    color: red;
+}
+/*标签有title才会触发*/
+
+a[href]{
+    color: red;
+}
+/*a标签有href才会触发*/
+
+a[href][title]{
+    color: red;
+}
+/*a标签有既有href还有title才会触发*/
+
+img[alt]{
+    display: block;
+}
+/*img标签有alt才会触发*/
+
