@@ -14,8 +14,8 @@
 
 .y-pos-center{
   top: 50%;
-  left: 50%;
-  @include transform(translate(-50%,-50%));
+  left: 0;
+  @include transform(translate(0%,-50%));
 }
 
 
