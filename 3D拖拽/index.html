@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" onselectstart ="return false">
 <head>
     <meta charset="UTF-8">
     <title>3D拖拽</title>
@@ -12,21 +12,101 @@
         ul,li,ol{
             list-style: none;
         }
+        body {
+            background-color: #000;
+        }
+        #box{
+            width: 120px;
+            height: 160px;
+            margin: 300px auto 0;
+            position: relative;
+            transform-style: preserve-3d;
+            border: 1px solid red;
+            transform: rotateX(-10deg) rotateY(0deg) perspective(800px);
+        }
+        #box .img {
+            position: absolute;
+            width: 120px;
+            height: 160px;
+            object-fit: cover;
+            /*box-reflect: below 10px linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,.5) 100%);*/
+            -webkit-box-reflect: below 10px -webkit-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,.5) 100%);
+        }
+        .bg{
+            width: 1200px;
+            height: 1200px;
+            background: -webkit-radial-gradient(center center, 600px 600px, rgba(255,255,255,.5), rgba(0,0,0,.5));
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            margin-top: -600px;
+            margin-left: -600px;
+            transform: rotateX(90deg);
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
     <div id="box">
-        <ul>
-            <li class="img"><img src="" alt=""></li>
-        </ul>
+        <img class="img" src="./img/1.jpg" alt="">
+        <img class="img" src="./img/2.jpg" alt="">
+        <img class="img" src="./img/3.jpg" alt="">
+        <img class="img" src="./img/4.jpg" alt="">
+        <img class="img" src="./img/5.jpg" alt="">
+        <img class="img" src="./img/6.jpg" alt="">
+        <img class="img" src="./img/7.jpg" alt="">
+        <img class="img" src="./img/8.jpg" alt="">
+        <img class="img" src="./img/9.jpg" alt="">
+        <img class="img" src="./img/10.jpg" alt="">
+        <img class="img" src="./img/11.jpg" alt="">
+        <img class="img" src="./img/12.jpg" alt="">
+        <p class="bg"></p>
     </div>
 </body>
 <script type="text/javascript">
     $(function () {
-        // 初始化
-        function init() {
-            // for (var i in $('.img')) {}
-        }
+        var imgLength = $('.img').size()
+        var degree = 360 / imgLength
+        var newX = 0, newY = 0
+        var roX = -10
+        var roY = 0
+        var play = null
+       for (var i = 0; i < imgLength; i++) {
+          $('.img').each(function (i) {
+             $(this).css({
+                 'transform' : 'rotateY(' + degree * i + 'deg) translateZ(400px)'
+             }).attr('ondragstart', 'return false')
+          })
+       }
+
+       $(document).mousedown(function (e) {
+           var x = e.clientX
+           var y = e.clientY
+           $(this).bind('mousemove', function (e) {
+               newX = e.clientX - x
+               newY = e.clientY - y
+
+               roY += newX * 0.2
+               roX -= newY * 0.1
+               $('#box').css({
+                   'transform' : 'perspective(800px) rotateY(' + roY + 'deg) rotateX(' + roX + 'deg)'
+               })
+               x = e.clientX
+               y = e.clientY
+           })
+       }).mouseup(function () {
+           $(this).unbind('mousemove')
+           play = setInterval(function () {
+               newX *= 0.95
+               newY *= 0.95
+               if ( Math.abs(newX) < 1 && Math.abs(newY) < 1) clearInterval(play)
+               roY += newX * 0.2
+               roX -= newY * 0.1
+               $('#box').css({
+                   'transform' : 'perspective(800px) rotateY(' + roY + 'deg) rotateX(' + roX + 'deg)'
+               })
+           }, 30)
+       })
     })
 </script>
 </html>
