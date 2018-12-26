@@ -218,6 +218,10 @@ clipboard.min.js//Ò»¼ü¸´ÖÆÁ´½Ó
 
 partial
 
+
+https://www.cnblogs.com/songdongdong/p/7116605.html
+https://www.jianshu.com/p/73e3677e9dd2
+
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
   <meta name="apple-mobile-web-app-capable" content="yes">
