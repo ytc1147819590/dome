@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8d68fb1-bb81-4d6e-95bf-8c73b105bf4a" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/购物车/day01.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/购物车/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/购物车/jquery-2.2.2.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c8d68fb1-bb81-4d6e-95bf-8c73b105bf4a" name="默认的" comment="" />
     <ignored path="dome.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/购物车/day01.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="668">
-              <caret line="107" column="33" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
+              <caret line="107" column="34" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
               <folding>
                 <element signature="e#1918#1942#0" />
                 <element signature="e#2458#2530#0" />
@@ -210,12 +205,12 @@
       <workItem from="1545746315160" duration="1793000" />
       <workItem from="1545748193348" duration="191000" />
       <workItem from="1545784393486" duration="50000" />
-      <workItem from="1545875930970" duration="8061000" />
+      <workItem from="1545875930970" duration="8122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16465000" />
+    <option name="totallyTimeSpent" value="16526000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -430,7 +425,7 @@
     <entry file="file://$PROJECT_DIR$/购物车/day01.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="668">
-          <caret line="107" column="33" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
+          <caret line="107" column="34" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
           <folding>
             <element signature="e#1918#1942#0" />
             <element signature="e#2458#2530#0" />
