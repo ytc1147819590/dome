@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" onselectstart ="return false">
+<head>
+    <meta charset="UTF-8">
+    <title>表单设计器</title>
+    <script type="text/javascript" src="jquery-2.2.2.min.js"></script>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        p,h1,h2,h3,h4,h5,h6,*{
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol,li{
+            list-style: none;
+        }
+        .flex-box{
+            display: flex;
+        }
+        .flex-wrap{
+            flex-wrap: wrap;
+        }
+        .flex-box > article{
+            flex: 1;
+        }
+        .list{
+            flex-basis: 30%;
+            font-size: 12px;
+            line-height: 26px;
+            text-align: center;
+            color: #333;
+            margin: 1%;
+            background: #f4f6fc;
+            border: 1px solid #f4f6fc;
+            cursor: move;
+        }
+        .list:hover{
+            color: #409eff;
+            border: 1px dashed #409eff;
+        }
+        .content{
+            background-color: #ccc;
+            height: 100%;
+        }
+        .attributes{
+            background-color: #14a6ef;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-box">
+        <!--导航-->
+        <article>
+            <h1>基础字段</h1>
+            <ul class="flex-box flex-wrap">
+                <li class="list" data-type="text" id="input1" ondragstart="dragstart(event)">单行文本</li>
+                <li class="list">多行文本</li>
+                <li class="list">计数器</li>
+                <li class="list">单选</li>
+            </ul>
+        </article>
+        <!--内容-->
+        <article>
+            <div class="content" ondrop="drop(event)">
+
+            </div>
+        </article>
+        <!--属性-->
+        <article>
+            <div class="attributes">
+            </div>
+        </article>
+    </div>
+</body>
+<script type="text/javascript">
+    $(function () {
+        var box = $('.list')
+        box.each(function (i) {// 设置为拖放
+            $(this).mousedown(function (i) {
+                $(this).attr('draggable', true).siblings().attr('draggable', false)
+            }).mouseup(function () {
+                box.attr('draggable', false)
+            })
+        })
+        //添加页面的dragover事件
+        document.ondragover = function(e) {
+            //阻止默认方法,取消拒绝被拖放
+            e.preventDefault();
+        }
+        //添加页面drop事件
+        document.ondrop = function(e) {
+            //阻止默认方法,取消拒绝被拖放
+            e.preventDefault();
+        }
+    })
+    var content = $('.content')
+    function dragstart(e) {
+        if (e.target.dataset.type === 'text') {
+            e.dataTransfer.setData('id', e.target.id)
+        }
+    }
+    function drop(e) {
+        var data=e.dataTransfer.getData("id")
+        console.log(e)
+        content.innerHTML += add()
+    }
+    function add() {
+        var item = "<input type='text'>"
+        return item
+    }
+</script>
+</html>
