@@ -20,11 +20,18 @@
             height: 50%;
             position: relative;
         }
+        #box:after{
+            content: '';
+            clear: both;
+            width: 0;
+            height: 0;
+            display: block;
+        }
         .slide{
-            /*width: 10%;*/
-            /*margin: 0 auto;*/
             height: 100%;
+            width: 50px;
             position: relative;
+            float: left;
             transform-style: preserve-3d;
             perspective: 800px;
         }
@@ -50,12 +57,16 @@
         .slide li:nth-child(4) {
             background-color: #aa4b00;
             transform-origin: left center;
+            /*transform: rotateY(90deg);*/
             transform: rotateY(90deg);
+            /*width: 454px;*/
         }
         .slide li:nth-child(5) {
             background-color: #f4b400;
-            transform-origin: right center;
-            transform: rotateY(-90deg);
+            transform-origin: left center;
+            transform: rotateY(90deg);
+            /*width: 454px;*/
+            left: 50px;
         }
         .slide li:nth-child(6) {
             background-color: #666666;
@@ -96,11 +107,34 @@
 </body>
 <script type="text/javascript">
     $(document).ready(function () {
-        var banner2Height = $('.slide').first().height()
-        console.log(banner2Height)
-        $('.slide li').last().css({
-            'transform': 'translateZ(-' + banner2Height + 'px)'
-        })
+        init()
+        function init() {
+            var banner2Height = $('.slide').first().height()
+            $('.slide li').last().css({
+                'transform': 'translateZ(-' + banner2Height + 'px)'
+            })
+            $('.slide li').eq(3).css({
+                'width': banner2Height
+            })
+            $('.slide li').eq(4).css({
+                'width': banner2Height
+            })
+        }
+        var boxWidth = $('#box').width()
+        var slides = $('.slide').width()
+        var str = '<ul class="slide">\n' +
+            '            <li></li>\n' +
+            '            <li></li>\n' +
+            '            <li></li>\n' +
+            '            <li></li>\n' +
+            '            <li></li>\n' +
+            '            <li></li>\n' +
+            '        </ul>'
+        for (var i = 0; i < boxWidth / slides; i++) {
+            console.log(str)
+            // str += str
+        }
+        $('#box').append(str)
         // var banner1Width = $('.banner1').width() / $('.banner1 > li').size()
         // var banner2Height = $('.banner2').height() / $('.banner1 > li').size()
         // for (var i = 0; i < $('.slide').size(); i++) {
