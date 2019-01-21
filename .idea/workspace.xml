@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8d68fb1-bb81-4d6e-95bf-8c73b105bf4a" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/3D轮播/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/3D轮播/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="c8d68fb1-bb81-4d6e-95bf-8c73b105bf4a" name="默认的" comment="" />
     <ignored path="dome.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +18,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/3D拖拽/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+            <state relative-caret-position="1850">
+              <caret line="89" column="32" lean-forward="true" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/3D轮播/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2225">
+              <caret line="137" column="41" lean-forward="true" selection-start-line="137" selection-start-column="41" selection-end-line="137" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -93,22 +100,6 @@
             <path>
               <item name="dome" type="b2602c69:ProjectViewProjectNode" />
               <item name="dome" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dome" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dome" type="462c0819:PsiDirectoryNode" />
-              <item name="3D拖拽" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dome" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dome" type="462c0819:PsiDirectoryNode" />
-              <item name="3D轮播" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dome" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dome" type="462c0819:PsiDirectoryNode" />
-              <item name="3D轮播" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -192,11 +183,12 @@
       <workItem from="1546483678076" duration="5102000" />
       <workItem from="1546562810140" duration="2526000" />
       <workItem from="1547694233124" duration="9017000" />
+      <workItem from="1547712505537" duration="1395000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33171000" />
+    <option name="totallyTimeSpent" value="34566000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -211,7 +203,7 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2074789" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2074789" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -420,22 +412,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/3D轮播/index.html">
+    <entry file="file://$PROJECT_DIR$/3D拖拽/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="136" column="12" selection-start-line="136" selection-start-column="12" selection-end-line="136" selection-end-column="12" />
-          <folding>
-            <element signature="e#683#707#0" />
-            <element signature="e#887#974#0" />
-            <element signature="e#1008#1130#0" />
-          </folding>
+        <state relative-caret-position="1850">
+          <caret line="89" column="32" lean-forward="true" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/3D拖拽/index.html">
+    <entry file="file://$PROJECT_DIR$/3D轮播/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+        <state relative-caret-position="2225">
+          <caret line="137" column="41" lean-forward="true" selection-start-line="137" selection-start-column="41" selection-end-line="137" selection-end-column="41" />
         </state>
       </provider>
     </entry>
