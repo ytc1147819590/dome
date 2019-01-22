@@ -20,56 +20,17 @@
             height: 50%;
             position: relative;
         }
-        #box:after{
-            content: '';
-            clear: both;
-            width: 0;
-            height: 0;
-            display: block;
-        }
         .slide{
-            height: 100%;
-            width: 50px;
-            position: relative;
-            float: left;
-            transform-style: preserve-3d;
-            perspective: 800px;
+            overflow: hidden;
+            width: 500px;
+            height: 300px;
+            margin: 0 auto;
         }
         .slide li{
-            position: absolute;
             width: 50px;
-            height: 100%;
-        }
-        .slide li:nth-child(1) {
+            height: 50px;
             background-color: red;
-            transform: translateZ(0px);
-        }
-        .slide li:nth-child(2) {
-            background-color: blue;
-            transform-origin: top center;
-            transform: rotateX(-90deg);
-        }
-        .slide li:nth-child(3) {
-            background-color: green;
-            transform-origin: bottom center;
-            transform: rotateX(90deg);
-        }
-        .slide li:nth-child(4) {
-            background-color: #aa4b00;
-            transform-origin: left center;
-            /*transform: rotateY(90deg);*/
-            transform: rotateY(90deg);
-            /*width: 454px;*/
-        }
-        .slide li:nth-child(5) {
-            background-color: #f4b400;
-            transform-origin: left center;
-            transform: rotateY(90deg);
-            /*width: 454px;*/
-            left: 50px;
-        }
-        .slide li:nth-child(6) {
-            background-color: #666666;
+            float: left;
         }
         /*分页*/
         .point-div{
@@ -98,65 +59,77 @@
             <li></li>
             <li></li>
             <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
         </ul>
-        <div class="point-div">
-            <div class="point"></div>
-            <div class="point"></div>
-        </div>
+        <!--<div class="point-div">-->
+            <!--<div class="point"></div>-->
+            <!--<div class="point"></div>-->
+        <!--</div>-->
     </div>
 </body>
 <script type="text/javascript">
     $(document).ready(function () {
-        init()
-        function init() {
-            var banner2Height = $('.slide').first().height()
-            $('.slide li').last().css({
-                'transform': 'translateZ(-' + banner2Height + 'px)'
-            })
-            $('.slide li').eq(3).css({
-                'width': banner2Height
-            })
-            $('.slide li').eq(4).css({
-                'width': banner2Height
-            })
-        }
-        var boxWidth = $('#box').width()
-        var slides = $('.slide').width()
-        var str = '<ul class="slide">\n' +
-            '            <li></li>\n' +
-            '            <li></li>\n' +
-            '            <li></li>\n' +
-            '            <li></li>\n' +
-            '            <li></li>\n' +
-            '            <li></li>\n' +
-            '        </ul>'
-        for (var i = 0; i < boxWidth / slides; i++) {
-            console.log(str)
-            // str += str
-        }
-        $('#box').append(str)
-        // var banner1Width = $('.banner1').width() / $('.banner1 > li').size()
-        // var banner2Height = $('.banner2').height() / $('.banner1 > li').size()
-        // for (var i = 0; i < $('.slide').size(); i++) {
-        //     $('.slide').eq(i).css({
-        //         'zIndex': -i
-        //     })
-        // }
-        // $('.banner1 > li').each(function (i) {
-        //     $(this).css({
-        //         'background': 'url(./img/0.jpg) ' + (-banner1Width * i) + 'px 0 no-repeat'
-        //     })
-        // })
-        // $('.banner2 > li').each(function (i) {
-        //     $(this).css({
-        //         'background': 'url(./img/1.jpg) 0 '+ (-banner2Height * i) +'px no-repeat'
-        //     })
-        // })
-        // $('#box').on('click', '.point', function () {
-        //     $('.banner1 > li').css({
-        //         'transform': 'rotateY(-90deg)'
-        //     })
-        // })
+        var slideWidth = $('.slide').width()
+        var slideHeight = $('.slide').height()
+        var listWidth = $('.slide li').width()
+        var listHeight = $('.slide li').height()
+
+        var rowX = slideWidth / listWidth
+        var colY = slideHeight / listHeight
+        console.log(rowX, colY)
     })
 </script>
 </html>
