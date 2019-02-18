@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8d68fb1-bb81-4d6e-95bf-8c73b105bf4a" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/ajax/ajax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax/js/jquery-2.2.2.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3D拖拽/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/3D拖拽/index.html" afterDir="false" />
     </list>
     <ignored path="dome.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -16,16 +17,51 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1803094890">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.84" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="1" />
+          <entry key="js" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="1" />
+          <entry key="JavaScript" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="10" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="dome" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/3D拖拽/index.html">
+        <entry file="file://$PROJECT_DIR$/ajax/ajax.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+            <state relative-caret-position="200">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -64,8 +100,15 @@
         <option value="$PROJECT_DIR$/es6/day05.js" />
         <option value="$PROJECT_DIR$/选择器/class.css" />
         <option value="$PROJECT_DIR$/3D拖拽/index.html" />
+        <option value="$PROJECT_DIR$/ajax/ajax.html" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
@@ -78,7 +121,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -89,12 +131,13 @@
             <path>
               <item name="dome" type="b2602c69:ProjectViewProjectNode" />
               <item name="dome" type="462c0819:PsiDirectoryNode" />
-              <item name="选择器" type="462c0819:PsiDirectoryNode" />
+              <item name="ajax" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -103,13 +146,14 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="E:\node\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vueExample/project" />
+    <property name="last_opened_file_path" value="F:/vue/lg_tzgl_view" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Example\dome\ajax\js" />
       <recent name="F:\project\vue\dome\3D拖拽" />
       <recent name="F:\project\vue\dome\3D拖拽\img" />
     </key>
@@ -127,7 +171,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="js.build_tools.gulp">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
@@ -136,7 +180,7 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner">
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
       <node-interpreter />
       <node-options />
       <working-directory>$PROJECT_DIR$</working-directory>
@@ -166,14 +210,17 @@
       <workItem from="1545746315160" duration="1793000" />
       <workItem from="1545748193348" duration="191000" />
       <workItem from="1545784393486" duration="50000" />
+      <workItem from="1546158624164" duration="31000" />
+      <workItem from="1550486127622" duration="635000" />
+      <workItem from="1550488854700" duration="17000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8404000" />
+    <option name="totallyTimeSpent" value="9087000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20758693" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -199,6 +246,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/modal/modal01.html">
@@ -359,10 +409,20 @@
     <entry file="file://$PROJECT_DIR$/3D拖拽/jquery-2.2.2.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/js/jquery-2.2.2.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/3D拖拽/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+        <state relative-caret-position="675">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/ajax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
